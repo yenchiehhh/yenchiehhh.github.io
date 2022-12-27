@@ -31,7 +31,10 @@ function cameraa() {
     // track.stop();
 };
 
-cameraTrigger.onclick = setInterval(cameraa,300);
+n=5000/300
+for (var i = 0; i < 300; i++) {
+  cameraTrigger.onclick = setTimeout(cameraa,n);
+}
 
 // Start the video stream when the window loads
 window.addEventListener("load", cameraStart, false);
